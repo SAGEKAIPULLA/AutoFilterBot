@@ -46,7 +46,7 @@ async def give_filter(client, message):
                 logger.error("Make sure Bot is admin in Forcesub channel")
                 return
             buttons = [[
-                InlineKeyboardButton("📢 Updates Channel 📢", url=invite_link.invite_link)
+                InlineKeyboardButton("⚡ Updates Channel ⚡", url=invite_link.invite_link)
             ],[
                 InlineKeyboardButton("🔁 Request Again 🔁", callback_data="grp_checksub")
             ]]
@@ -346,7 +346,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         btn = [[
             InlineKeyboardButton('⚡️ Updates Channel ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('🔥 Support Group 🔥', url=SUPPORT_LINK)
+            InlineKeyboardButton('🀄 Support Group 🀄', url=SUPPORT_LINK)
         ]]
         await query.message.delete()
         await client.send_cached_media(
@@ -407,7 +407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "my_owner":
         buttons = [[
             InlineKeyboardButton('🏠 Home 🏠', callback_data='start'),
-            InlineKeyboardButton('Contact', url='https://t.me/Hansaka_Anuhas')
+            InlineKeyboardButton('Contact', url='https://t.me/Praxxsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -420,7 +420,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('‼️ ʜᴏᴡ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ sʜᴏʀᴛɴᴇʀ ‼️', callback_data='howshort')
         ],[
             InlineKeyboardButton('≼ ʙᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton('💬 ʜᴇʟᴘ', url="https://telegram.me/SL_Bots_Support"),
+            InlineKeyboardButton('🔰 ʜᴇʟᴘ 🔰', url="https://telegram.me/body_soda_updates"),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -894,7 +894,7 @@ async def advantage_spell_chok(msg):
     search = message.text
     google_search = search.replace(" ", "+")
     btn = [[
-        InlineKeyboardButton("⚠️ Instructions ⚠️", callback_data='instructions'),
+        InlineKeyboardButton("🎯 Instructions 🎯", callback_data='instructions'),
         InlineKeyboardButton("🔎 Search Google 🔍", url=f"https://www.google.com/search?q={google_search}")
     ]]
     try:
