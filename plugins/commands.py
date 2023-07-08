@@ -24,7 +24,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         btn = [[
             InlineKeyboardButton('⚡️ Updates Channel ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('🔥 Support Group 🔥', url=SUPPORT_LINK)
+            InlineKeyboardButton('🀄 Support Group 🀄', url=SUPPORT_LINK)
         ]]
         s = await message.reply_sticker(sticker=random.choice(STICKERS), reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(30)
@@ -66,7 +66,7 @@ async def start(client, message):
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
         btn = [[
-            InlineKeyboardButton("📢 Updates Channel 📢", url=invite_link.invite_link)
+            InlineKeyboardButton("⚡ Updates Channel ⚡", url=invite_link.invite_link)
         ]]
 
         if message.command[1] != "subscribe" and not message.command[1].startswith("all"):
@@ -118,7 +118,7 @@ async def start(client, message):
             
             btn = [[
                 InlineKeyboardButton('⚡️ Updates Channel ⚡️', url=UPDATES_LINK),
-                InlineKeyboardButton('🔥 Support Group 🔥', url=SUPPORT_LINK)
+                InlineKeyboardButton('🀄 Support Group 🀄', url=SUPPORT_LINK)
             ]]
             await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -144,7 +144,7 @@ async def start(client, message):
     
     btn = [[
         InlineKeyboardButton('⚡️ Updates Channel ⚡️', url=UPDATES_LINK),
-        InlineKeyboardButton('🔥 Support Group 🔥', url=SUPPORT_LINK)
+        InlineKeyboardButton('🀄 Support Group 🀄', url=SUPPORT_LINK)
     ]]
     await client.send_cached_media(
         chat_id=message.from_user.id,
@@ -476,7 +476,7 @@ async def save_shortlink(client, message):
     try:
         _, url, api = message.text.split(" ", 2)
     except:
-        return await message.reply_text("<b>Command Incomplete:-\n\ngive me a shortlink & api along with the command...\n\nEx:- <code>/shortlink mdisklink.link 5843c3cc645f5077b2200a2c77e0344879880b3e</code>")
+        return await message.reply_text("<b>Command Incomplete:-\n\ngive me a shortlink & api along with the command...\n\nEx:- <code>/shortlink kpslink.in 0ab71a33992bf7d021e591ac145c244c4163e94e</code>")
     
     try:
         shortzy = Shortzy(api_key=api, base_site=url)
